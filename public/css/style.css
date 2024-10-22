@@ -7,7 +7,7 @@
 html {
     font-family: "Roboto", "Noto Sans", "Helvetica", sans-serif;
     font-size: 14px;
-    background-color: #f0f0f0; /* Abu-abu Sangat Muda */
+    background-color: #e3f2fd; /* Light blue background */
     height: 100%;
 }
 
@@ -15,8 +15,9 @@ html {
     width: 350px;
     height: auto;
     margin: 70px auto 0;
+    border-radius: 10px; /* Rounded corners */
     overflow: hidden;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
 }
 
 .calculator span {
@@ -27,7 +28,9 @@ html {
 .top {
     position: relative;
     height: 150px;
-    background-color: #ffffff; /* Putih */
+    background-color: #ffffff; /* White */
+    border-bottom: 4px solid #2196f3; /* Blue accent line */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
 }
 
 .top .unit {
@@ -36,7 +39,7 @@ html {
     top: 10px;
     left: 10px;
     font-weight: 700;
-    color: #424242; /* Abu-abu Tua */
+    color: #424242; /* Dark gray */
 }
 
 .top .screen {
@@ -56,28 +59,27 @@ html {
 }
 
 .screen .input {
-    color: #212121; /* Hitam */
+    color: #212121; /* Black */
     height: 60%;
     font-size: 35px;
 }
 
 .screen .result {
-    color: #666666; /* Abu-abu Sedang */
+    color: #666666; /* Medium gray */
     font-size: 20px;
     height: 40%;
 }
 
 .bottom {
-    background-color: #90a4ae; /* Abu-abu Kebiruan */
+    background-color: #607d8b; /* Blue-gray */
     height: 300px;
-    color: #ffffff; /* Putih */
+    color: #ffffff; /* White */
     cursor: pointer;
 }
 
 .bottom section {
     position: relative;
     height: 100%;
-    float: left;
     display: flex;
 }
 
@@ -104,32 +106,41 @@ html {
     flex-grow: 1;
     width: 100%;
     line-height: 1;
-    padding: 10px;
+    padding: 15px; /* Increased padding for larger touch targets */
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+    border-radius: 8px; /* Rounded buttons */
 }
 
 .keys .column span {
     font-size: 25px;
-    background-color: #b0bec5; /* Abu-abu Muda */
+    background-color: #b0bec5; /* Light gray */
 }
 
 .keys .column span:hover,
 .operators span:hover {
-    background-color: #ff5722; /* Merah */
+    background-color: #ff5722; /* Red */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .operators {
     width: 20%;
     font-size: 18px;
-    background-color: #ffab40; /* Kuning Rempah */
+    background-color: #ffab40; /* Spice yellow */
 }
 
 .delete {
     font-size: 16px;
     text-transform: uppercase;
+    background-color: #f44336; /* Red */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding for better touch area */
+}
+
+.delete:hover {
+    background-color: #d32f2f; /* Darker red on hover */
 }
 
 .credit {
@@ -143,5 +154,5 @@ html {
 
 .credit a,
 .error {
-    color: #c2185b;
+    color: #c2185b; /* Pink */
 }
